@@ -12,7 +12,7 @@
 RootModule = 'PSGitLab.psm1'
 
 # Version number of this module.
-ModuleVersion = '2.4.3'
+ModuleVersion = '2.5.0'
 
 # ID used to uniquely identify this module
 GUID = 'f844db87-fda8-403b-a7da-bdc00a3f5a58'
@@ -94,7 +94,9 @@ FunctionsToExport = @(
     'New-GitLabMilestone',
     'Get-GitLabMilestone',
     'Set-GitLabMilestone',
-    'Close-GitLabMilestone'
+    'Close-GitLabMilestone',
+    'New-GitLabUserKey',
+    'Remove-GitLabUserKey'
     )
 
 # Cmdlets to export from this module
