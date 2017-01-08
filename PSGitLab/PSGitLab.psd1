@@ -72,6 +72,7 @@ FunctionsToExport = @(
     'Get-GitLabUser',
     'Remove-GitLabUser',
     'New-GitLabUser',
+    "Get-GitLabUserKey",
     'Get-GitLabProject',
     'Get-GitLabProjectEvent',
     'New-GitLabFork',
