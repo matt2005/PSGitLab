@@ -96,7 +96,8 @@ FunctionsToExport = @(
     'Set-GitLabMilestone',
     'Close-GitLabMilestone',
     'New-GitLabUserKey',
-    'Remove-GitLabUserKey'
+    'Remove-GitLabUserKey',
+    'Push-SSHKeysToGitLab'
     )
 
 # Cmdlets to export from this module
