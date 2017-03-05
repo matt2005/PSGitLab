@@ -16,7 +16,7 @@ param(
 
 $GitLabConfig = ImportConfig
 $Domain = $GitLabConfig.Domain
-if ( $IsWindows -or ( $PSVersionTable.PSVersion -lt [System.Management.Automation.SemanticVersion]"5.99.0" ) ) {
+if ( $IsWindows -or ( [version]$PSVersionTable.PSVersion -lt [version]"5.99.0" ) ) {
     $Token = DecryptString -Token $GitLabConfig.Token
 } elseif ( $IsLinux ) {
     $Token = $GitLabConfig.Token
