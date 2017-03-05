@@ -15,7 +15,7 @@ param(
     $Domain
 )
 
-if ( $IsWindows -or ( $PSVersionTable.PSVersion -lt [version]"6.0" ) ) {
+if ( $IsWindows -or ( $PSVersionTable.PSVersion -lt [System.Management.Automation.SemanticVersion]"5.99.0" ) ) {
     
     $Parameters = @{
         Token=(ConvertTo-SecureString -string $Token -AsPlainText -Force)
@@ -25,6 +25,8 @@ if ( $IsWindows -or ( $PSVersionTable.PSVersion -lt [version]"6.0" ) ) {
     $ConfigFile = "$env:appdata\PSGitLab\PSGitLabConfiguration.xml"
 
 } elseif ( $IsLinux ) {
+
+    Write-Warning "Warning: Your GitLab token will be stored in plain-text on non-Windows platforms."
 
     $Parameters = @{
         Token=$Token
