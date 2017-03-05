@@ -15,15 +15,31 @@ param(
     $Domain
 )
 
-$Parameters = @{
-    Token=(ConvertTo-SecureString -string $Token -AsPlainText -Force)
-    Domain=$Domain;
+if ( $IsWindows ) {
+    
+    $Parameters = @{
+        Token=(ConvertTo-SecureString -string $Token -AsPlainText -Force)
+        Domain=$Domain;
+    }
+    
+    $ConfigFile = "$env:appdata\PSGitLab\PSGitLabConfiguration.xml"
+
+} elseif ( $IsLinux ) {
+
+    $Parameters = @{
+        Token=$Token
+        Domain=$Domain;
+    }
+    
+    $ConfigFile = "{0}/.psgitlab/PSGitLabConfiguration.xml" -f $HOME
+
+} else {
+    Write-Error "Unknown Platform"
 }
-$ConfigPath = "$env:appdata\PSGitLab\PSGitLabConfiguration.xml"
-if (-not (Test-Path (Split-Path $ConfigPath))) {
-    New-Item -ItemType Directory -Path (Split-Path $ConfigPath) | Out-Null
+if (-not (Test-Path (Split-Path $ConfigFile))) {
+    New-Item -ItemType Directory -Path (Split-Path $ConfigFile) | Out-Null
 
 }
-$Parameters | Export-Clixml -Path $ConfigPath
+$Parameters | Export-Clixml -Path $ConfigFile
 Remove-Variable Parameters
 }

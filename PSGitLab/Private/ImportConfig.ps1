@@ -7,7 +7,14 @@ Function ImportConfig {
 .EXAMPLE
     ImportConfig
 #>
-$ConfigFile = "$env:appdata\PSGitLab\PSGitLabConfiguration.xml"
+
+if ( $IsWindows ) {
+    $ConfigFile = "$env:appdata\PSGitLab\PSGitLabConfiguration.xml"
+} elseif ( $IsLinux ) {
+    $ConfigFile = "{0}/.psgitlab/PSGitLabConfiguration.xml" -f $HOME
+} else {
+    Write-Error "Unknown Platform"
+}
 if (Test-Path $ConfigFile) {
     Import-Clixml $ConfigFile
 
