@@ -8,7 +8,7 @@ Function ImportConfig {
     ImportConfig
 #>
 
-if ( $IsWindows ) {
+if ( $IsWindows -or ( $PSVersionTable.PSVersion -lt [version]"6.0" ) ) {
     $ConfigFile = "$env:appdata\PSGitLab\PSGitLabConfiguration.xml"
 } elseif ( $IsLinux ) {
     $ConfigFile = "{0}/.psgitlab/PSGitLabConfiguration.xml" -f $HOME

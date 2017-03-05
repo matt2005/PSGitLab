@@ -15,7 +15,7 @@ param(
     $Domain
 )
 
-if ( $IsWindows ) {
+if ( $IsWindows -or ( $PSVersionTable.PSVersion -lt [version]"6.0" ) ) {
     
     $Parameters = @{
         Token=(ConvertTo-SecureString -string $Token -AsPlainText -Force)
