@@ -80,6 +80,7 @@ FunctionsToExport = @(
     'Set-GitlabProjectServiceSlack',
     'Remove-GitlabProjectServiceSlack',
     'Get-GitLabProjectTags',
+    'Get-GitLabProjectCommits',
     'New-GitLabFork',
     'Set-GitLabUser',
     'New-GitLabProject',
