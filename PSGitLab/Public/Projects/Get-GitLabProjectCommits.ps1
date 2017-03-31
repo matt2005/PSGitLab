@@ -27,7 +27,7 @@
     .OUTPUTS
     GitLab.Project.Tag
   #>
-[OutputType('GitLab.Project.Tag')]
+[OutputType('GitLab.Project.Commit')]
   [cmdletbinding()]
   param(
     [ValidateNotNull()]
