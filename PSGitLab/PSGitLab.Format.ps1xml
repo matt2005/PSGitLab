@@ -364,5 +364,49 @@
           </ListEntries>
         </ListControl>
       </View>
+         <View>
+        <Name>PSGitLab</Name>
+    <ViewSelectedBy>
+      <TypeName>GitLab.Project.Tag</TypeName>
+    </ViewSelectedBy>
+        <ListControl>
+          <ListEntries>
+            <ListEntry>
+              <ListItems>
+              <ListItem>
+                  <PropertyName>Name</PropertyName>
+                </ListItem>   
+              <ListItem>
+                  <PropertyName>Message</PropertyName>
+                </ListItem>                  
+                <ListItem>
+                    <Label>Commit ID</Label>
+                 <ScriptBlock>$_.commit.id</ScriptBlock>
+                </ListItem>                
+                <ListItem>
+                    <Label>Commit Message</Label>
+                 <ScriptBlock>$($_.Commit.Message).Trim()</ScriptBlock>
+                </ListItem>
+                <ListItem>
+                  <Label>Authored Date</Label>
+                                   <ScriptBlock>$_.commit.authored_date</ScriptBlock>
+                </ListItem>
+                <ListItem>
+                  <Label>Author</Label>
+                                   <ScriptBlock>$_.commit.author_name</ScriptBlock>
+                </ListItem>
+                                <ListItem>
+                  <Label>Committed Date</Label>
+                                   <ScriptBlock>$_.commit.committed_date</ScriptBlock>
+                </ListItem>
+                                <ListItem>
+                  <Label>Committer</Label>
+                                   <ScriptBlock>$_.commit.committer_name</ScriptBlock>
+                </ListItem>
+              </ListItems>
+            </ListEntry>
+          </ListEntries>
+        </ListControl>
+      </View>
    </ViewDefinitions>
 </Configuration>
