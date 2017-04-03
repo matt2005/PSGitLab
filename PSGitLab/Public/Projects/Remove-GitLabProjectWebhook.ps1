@@ -1,40 +1,5 @@
 Function Remove-GitLabProjectWebhook
 {
-  <#
-      .SYNOPSIS
-      Remove a webhook assigned to a project
-
-      .DESCRIPTION
-      Remove a webhook assigned to a project
-
-      .PARAMETER Id
-      Project Id.
-
-      .PARAMETER Namespace
-      Project Namespace.
-
-      .PARAMETER hook_id
-      Webhook ID
-
-      .EXAMPLE
-      Remove-GitLabProjectWebhooks -Id 1 -hook_id 1
-      Remove webhook ID 1 for project id 1
-
-      .EXAMPLE
-      Remove-GitLabProjectWebhooks -Namespace Test -hook_id 1
-      Remove webhook ID 1 for namespace Test
-
-      .NOTES
-    
-
-      .LINK
-      https://docs.gitlab.com/ce/api/projects.html#hooks
-
-      .INPUTS
-
-      .OUTPUTS
-      GitLab.Project.Webhook
-  #>
   [OutputType('GitLab.Project.Webhook')]
   [cmdletbinding()]
   param(

@@ -1,33 +1,5 @@
 Function Get-GitLabProjectServiceSlack
 {
-<#
-    .SYNOPSIS
-    Get the Slack Webhook
-
-    .DESCRIPTION
-    Gets Slack notification settings from gitlab
-
-    .PARAMETER Id
-    Project Id.
-
-    .PARAMETER Namespace
-    Project Namespace.
-
-    .EXAMPLE
-    Get-GitLabProjectServiceSlack -Webhook https://hooks.slack.com/asfdss -Id 1
-    Gets the Slack Settings on project id 1
-    
-    .NOTES
-
-    .LINK
-    https://docs.gitlab.com/ce/api/services.html#get-slack-service-settings
-
-    .INPUTS
-
-
-    .OUTPUTS
-    GitLab.Project.Service.Slack
-  #>
 [OutputType('GitLab.Project.Service.Slack')]
   [cmdletbinding()]
   param(

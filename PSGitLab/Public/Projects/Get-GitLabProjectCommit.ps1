@@ -1,32 +1,5 @@
-﻿Function Get-GitLabProjectCommits
+﻿Function Get-GitLabProjectCommit
 {
-<#
-    .SYNOPSIS
-    Get the Project Commits
-
-    .DESCRIPTION
-    Get the Project Commits
-
-    .PARAMETER Id
-    Project Id.
-
-    .PARAMETER Namespace
-    Project Namespace.
-
-    .EXAMPLE
-    Get-GitLabProjectCommits -id 1
-    Gets the Commits on project id 1
-    
-    .NOTES
-
-    .LINK
-
-    .INPUTS
-
-
-    .OUTPUTS
-    GitLab.Project.Tag
-  #>
 [OutputType('GitLab.Project.Commit')]
   [cmdletbinding()]
   param(

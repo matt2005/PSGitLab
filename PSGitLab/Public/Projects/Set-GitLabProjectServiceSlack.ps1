@@ -1,38 +1,5 @@
 Function Set-GitLabProjectServiceSlack
 {
-  <#
-    .SYNOPSIS
-    Set the Slack Webhook
-
-    .DESCRIPTION
-    Enables Slack notification from gitlab
-
-    .PARAMETER Id
-    Project Id.
-
-    .PARAMETER Namespace
-    Project Namespace.
-
-    .PARAMETER webhook
-    Slack webhook.
-
-    .EXAMPLE
-    Set-GitLabProjectServiceSlack -Webhook https://hooks.slack.com/asfdss -Id 1
-    Sets the webhook on project id 1
-    
-    .NOTES
-
-    .LINK
-    https://docs.gitlab.com/ce/api/services.html#get-slack-service-settings
-
-    .INPUTS
-
-
-    .OUTPUTS
-    GitLab.Project.Service.Slack
-  #>
-
-
 [OutputType('GitLab.Project.Service.Slack')]
   [cmdletbinding()]
   param(

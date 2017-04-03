@@ -1,32 +1,5 @@
-﻿Function Get-GitLabProjectTags
+﻿Function Get-GitLabProjectTag
 {
-<#
-    .SYNOPSIS
-    Get the Project Tags
-
-    .DESCRIPTION
-    Get the Project Tags
-
-    .PARAMETER Id
-    Project Id.
-
-    .PARAMETER Namespace
-    Project Namespace.
-
-    .EXAMPLE
-    Get-GitLabProjectTags -id 1
-    Gets the Tags on project id 1
-    
-    .NOTES
-
-    .LINK
-
-    .INPUTS
-
-
-    .OUTPUTS
-    GitLab.Project.Tag
-  #>
 [OutputType('GitLab.Project.Tag')]
   [cmdletbinding()]
   param(

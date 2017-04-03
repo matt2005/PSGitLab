@@ -1,37 +1,5 @@
-Function Get-GitLabProjectWebhooks
+Function Get-GitLabProjectWebhook
 {
-  <#
-      .SYNOPSIS
-      Get the webhooks assigned to a project
-
-      .DESCRIPTION
-      Get the web hooks assigned to aproject
-
-      .PARAMETER Id
-      Project Id.
-
-      .PARAMETER Namespace
-      Project Namespace.
-
-      .EXAMPLE
-      Get-GitLabProjectWebhooks -Id 1
-      Get all thw webhooks for project id 1
-
-      .EXAMPLE
-      Get-GitLabProjectWebhooks -Namespace Test
-      Get all thw webhooks for namespace Test
-
-      .NOTES
-    
-
-      .LINK
-      https://docs.gitlab.com/ce/api/projects.html#hooks
-
-      .INPUTS
-
-      .OUTPUTS
-      GitLab.Project.Webhook
-  #>
 
   [OutputType('GitLab.Project.Webhook')]
   [cmdletbinding()]

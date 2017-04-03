@@ -1,33 +1,5 @@
 Function Remove-GitLabProjectServiceSlack
 {
-  <#
-    .SYNOPSIS
-   Remove Slack Webhook
-
-    .DESCRIPTION
-    Disables Slack notification from gitlab
-
-    .PARAMETER Id
-    Project Id.
-
-    .PARAMETER Namespace
-    Project Namespace.
-    
-    .EXAMPLE
-    Remove-GitLabProjectServiceSlack -Id 1
-    Disables Slack Notification on project id 1
-    
-    .NOTES
-
-    .LINK
-    https://docs.gitlab.com/ce/api/services.html#get-slack-service-settings
-
-    .INPUTS
-
-
-    .OUTPUTS
-    GitLab.Project.Service.Slack
-  #>
 [OutputType('GitLab.Project.Service.Slack')]
   [cmdletbinding()]
   param(
