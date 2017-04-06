@@ -9,7 +9,7 @@
   )
   $repoTree = Get-GitlabProjectRepositoryTree -ProjectID $ProjectID
   If (-not($repotree | Where-Object -FilterScript {
-      ($_.Type -eq 'file') -and ($_.name -eq '.gitmodules')
+      ($_.Type -eq 'blob') -and ($_.name -eq '.gitmodules')
   })) {
     Throw ('.gitmodules file missing from Project {0}' -f $ProjectID)
   }
