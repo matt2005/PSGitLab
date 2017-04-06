@@ -108,6 +108,7 @@ FunctionsToExport = @(
     'Remove-GitLabUserKey',
     'Push-SSHKeysToGitLab',
     'Get-GitLabProjectSubmodule',
+    'Get-GitLabProjectArchive',
     'Get-GitLabProjectRepositoryTree'
     )
 
