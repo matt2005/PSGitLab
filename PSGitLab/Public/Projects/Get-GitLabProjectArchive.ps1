@@ -1,6 +1,6 @@
 ﻿Function Get-GitLabProjectArchive 
 {
-[OutputType('Sttring')]
+[OutputType('String')]
   param(
     [parameter(mandatory,HelpMessage = 'Project ID')][int]$ProjectID,
     [AllowNull][string]$CommitID = $null,
