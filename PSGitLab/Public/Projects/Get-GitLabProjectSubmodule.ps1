@@ -5,12 +5,18 @@
   [cmdletbinding()]
   param(
     [parameter(mandatory,HelpMessage='Project ID')][int]$ProjectID,
-    [AllowNull][string]$CommitID = $null
+    [string]$CommitID
   )
-  $repoTree = (Get-GitlabProjectRepositoryTree -ProjectID $ProjectID | Where-Object -FilterScript {
-      $_.Type -eq 'commit'
-  }) 
+  $repoTree = Get-GitlabProjectRepositoryTree -ProjectID $ProjectID
+  If (-not($repotree | Where-Object -FilterScript {
+      ($_.Type -eq 'file') -and ($_.name -eq '.gitmodules')
+  })) {
+    Throw ('.gitmodules file missing from Project {0}' -f $ProjectID)
+  }
   $Projects = Get-GitLabProject
+  $repoTree = $repoTree | Where-Object -FilterScript {
+      $_.Type -eq 'commit'
+  }
   $Request = @{
     URI    = ('/projects/{0}/repository/files/.gitmodules?ref={1}' -f $repoTree[0].ProjectID, $repoTree[0].CommitID)
     Method = 'GET'

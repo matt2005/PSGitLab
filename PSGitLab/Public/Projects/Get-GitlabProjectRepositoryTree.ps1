@@ -5,7 +5,7 @@
   [cmdletbinding()]
   param(
      [parameter(mandatory,HelpMessage='Project ID')][int]$ProjectID,
-     [AllowNull][string]$CommitID = $null
+     [string]$CommitID
   )
 
 
