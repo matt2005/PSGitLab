@@ -3,11 +3,11 @@
 [OutputType('String')]
   param(
     [parameter(mandatory,HelpMessage = 'Project ID')][int]$ProjectID,
-    [AllowNull][string]$CommitID = $null,
+    [string]$CommitID = $null,
     [string]$OutFile = "$PWD\test.zip"
   )
 
-  $Commits = Get-GitLabProjectCommits -id $ProjectID
+  $Commits = Get-GitLabProjectCommit -id $ProjectID
   IF (-not($CommitID))
   {
     $CommitID = $Commits[0].id #most recent commit id
