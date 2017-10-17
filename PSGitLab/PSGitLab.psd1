@@ -12,7 +12,7 @@
 RootModule = 'PSGitLab.psm1'
 
 # Version number of this module.
-ModuleVersion = '2.5.2'
+ModuleVersion = '2.5.5'
 
 # ID used to uniquely identify this module
 GUID = 'f844db87-fda8-403b-a7da-bdc00a3f5a58'
@@ -79,6 +79,9 @@ FunctionsToExport = @(
     'Get-GitlabProjectServiceSlack',
     'Set-GitlabProjectServiceSlack',
     'Remove-GitlabProjectServiceSlack',
+    'Get-GitlabProjectServiceMSTeams',
+    'Set-GitlabProjectServiceMSTeams',
+    'Remove-GitlabProjectServiceMSTeams',
     'Get-GitLabProjectTag',
     'Get-GitLabProjectCommit',
     'New-GitLabFork',
@@ -106,7 +109,10 @@ FunctionsToExport = @(
     'Close-GitLabMilestone',
     'New-GitLabUserKey',
     'Remove-GitLabUserKey',
-    'Push-SSHKeysToGitLab'
+    'Push-SSHKeysToGitLab',
+    'Get-GitLabProjectSubmodule',
+    'Get-GitLabProjectArchive',
+    'Get-GitLabProjectRepositoryTree'
     )
 
 # Cmdlets to export from this module
