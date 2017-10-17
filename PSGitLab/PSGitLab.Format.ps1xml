@@ -365,6 +365,55 @@
         </ListEntries>
       </ListControl>
     </View>
+
+    <View>
+      <Name>PSGitLab</Name>
+      <ViewSelectedBy>
+        <TypeName>GitLab.Project.Service.MSTeams</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <PropertyName>id</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>title</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>push_events</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>issues_events</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>merge_requests_events</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>tag_push_events</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>note_events</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>pipeline_events</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>Webhook</Label>
+                <ScriptBlock>$_.properties.webhook</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <PropertyName>created_at</PropertyName>
+              </ListItem>
+              <ListItem>
+                <PropertyName>updated_at</PropertyName>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
     <View>
       <Name>PSGitLab</Name>
       <ViewSelectedBy>
